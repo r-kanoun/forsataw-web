@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bad2faf2a72677bf4344676d4e2814f1",
+    "content-hash": "e320bf97eb649f39a8f4d8222c3103c0",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -5155,81 +5155,6 @@
                 }
             ],
             "time": "2026-08-13T09:11:54+00:00"
-        },
-        {
-            "name": "madnest/madzipper",
-            "version": "1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/madnest/madzipper.git",
-                "reference": "527c35105820a0b4c8cfdadd3f475b26d62d9ac2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/madnest/madzipper/zipball/527c35105820a0b4c8cfdadd3f475b26d62d9ac2",
-                "reference": "527c35105820a0b4c8cfdadd3f475b26d62d9ac2",
-                "shasum": ""
-            },
-            "require": {
-                "ext-zip": "*",
-                "illuminate/filesystem": "^11.0|^12.0",
-                "illuminate/support": "^11.0|^12.0",
-                "php": "^8.2"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.15",
-                "mockery/mockery": "^1.4.4",
-                "nunomaduro/collision": "^8.0",
-                "orchestra/testbench": "^9.0|^10.0",
-                "phpunit/phpunit": "^10.5|^11.5.3"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "aliases": {
-                        "Madzipper": "Madnest\\Madzipper\\Madzipper"
-                    },
-                    "providers": [
-                        "Madnest\\Madzipper\\MadzipperServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Madnest\\Madzipper\\": "src/Madnest/Madzipper"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nils Plaschke",
-                    "email": "github@nilsplaschke.de",
-                    "homepage": "http://nilsplaschke.de",
-                    "role": "Original author"
-                },
-                {
-                    "name": "Jakub Theimer",
-                    "email": "jakub@dy.st",
-                    "homepage": "https://dy.st",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Easier zip file handling for Laravel applications.",
-            "homepage": "https://github.com/madnest/madzipper",
-            "keywords": [
-                "laravel",
-                "php",
-                "zip",
-                "ziparchive"
-            ],
-            "support": {
-                "issues": "https://github.com/madnest/madzipper/issues",
-                "source": "https://github.com/madnest/madzipper/tree/v1.6.0"
-            },
-            "time": "2025-02-25T20:01:40+00:00"
         },
         {
             "name": "maennchen/zipstream-php",
@@ -15011,9 +14936,9 @@
         "ext-json": "*",
         "ext-simplexml": "*"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "platform-overrides": {
         "php": "8.3.0"
     },
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.2.0"
 }

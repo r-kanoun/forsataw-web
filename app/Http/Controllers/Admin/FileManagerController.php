@@ -12,7 +12,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Brian2694\Toastr\Facades\Toastr;
-use Madnest\Madzipper\Facades\Madzipper;
+use App\Support\ZipExtractor;
 use ZipArchive;
 use Illuminate\Pagination\LengthAwarePaginator;
 use App\Support\Storage\FileStorage;
@@ -225,7 +225,7 @@ class FileManagerController extends Controller
                     $zip->close();
                 }
             }else{
-                Madzipper::make($file)->extractTo('storage/app/'.$request->path);
+                ZipExtractor::extract($file->path(), 'storage/app/'.$request->path);
             }
 
 

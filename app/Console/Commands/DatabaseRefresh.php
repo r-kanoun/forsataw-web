@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
-use Madnest\Madzipper\Facades\Madzipper;
+use App\Support\ZipExtractor;
 use App\Support\Notification\SendNotification;
 use App\Support\Notification\NotificationMessages;
 class DatabaseRefresh extends Command
@@ -54,6 +54,6 @@ class DatabaseRefresh extends Command
         $sql_path = base_path('installation/backup/database.sql');
         DB::unprepared(file_get_contents($sql_path));
         File::deleteDirectory('storage/app/public');
-        Madzipper::make('installation/backup/public.zip')->extractTo('storage/app');
+        ZipExtractor::extract('installation/backup/public.zip', 'storage/app');
     }
 }

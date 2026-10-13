@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Storage;
-use Madnest\Madzipper\Facades\Madzipper;
+use App\Support\ZipExtractor;
 use Illuminate\Support\Facades\Session;
 
 class InstallController extends Controller
@@ -165,7 +165,7 @@ class InstallController extends Controller
         Storage::disk('public')->makeDirectory('/');
 
         try {
-            Madzipper::make('installation/backup/public.zip')->extractTo('storage/app');
+            ZipExtractor::extract('installation/backup/public.zip', 'storage/app');
         }catch (\Exception $exception){
             info($exception);
         }

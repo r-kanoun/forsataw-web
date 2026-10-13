@@ -6,7 +6,7 @@ use App\CentralLogics\Helpers;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
-use Madnest\Madzipper\Facades\Madzipper;
+use App\Support\ZipExtractor;
 
 class InstallablePackage extends Command
 {
@@ -56,7 +56,7 @@ class InstallablePackage extends Command
 
         Helpers::remove_dir('storage/app/public');
         Storage::disk('public')->makeDirectory('/');
-        Madzipper::make('installation/backup/public.zip')->extractTo('storage/app');
+        ZipExtractor::extract('installation/backup/public.zip', 'storage/app');
 
         $dot_env = base_path('.env');
         $new_env = base_path('.env.example');
